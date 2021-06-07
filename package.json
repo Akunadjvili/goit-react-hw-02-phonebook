@@ -20,7 +20,10 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "presave": "git add .",
+    "save": "git commit -m 'update'",
+    "postsave": "git push"
   },
   "eslintConfig": {
     "extends": [
@@ -50,7 +53,9 @@
     "mrm-task-lint-staged": "^6.0.0",
     "node-sass": "^6.0.0",
     "prettier": "^2.3.0",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "shortid": "^2.2.16",
+    "uuid": "^8.3.2"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
